@@ -4,7 +4,7 @@
 // 
 // MP1.cpp 
 // 
-// Last Updated: September 18, 2021
+// Last Updated: September 28, 2021
 // Hailey M. Wendt
 // 
 // This program has been created to calculate the cost of a customer's purchase at a donut shop. 
