@@ -31,6 +31,7 @@ int main()
     cin >> appleFritters;
 
     // declare variables & read out what the customer owes
+    // calculate cost of each donut type that the customer owes
     double appleFritterPrice = (appleFritters * 1.50);
     double regDonutPrice = (regularDonuts % 12) * 0.75;
     double regDozenPrice = (regularDonuts / 12) * 7.99;
