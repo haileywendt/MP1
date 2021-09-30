@@ -54,7 +54,7 @@ int main()
         cout << fixed << setprecision(2) << "Change owed is $" << change << " - ";
     }
     else {
-        cout << "Exact payment received - no change owed.";
+        cout << "Exact payment received - no change owed";
     }
 
     // declare variables & determine how much of each change type is given back to the customer
@@ -72,36 +72,62 @@ int main()
 
     // determines if type of change is equal to 1 or greater than or equal to 2
     // determines if word displayed is plural or singular
+    // determines whether punctuation should be a "," or a "."
     if (dollars >= 2) {
-        cout << dollars << " dollars" << ", ";
+        cout << dollars << " dollars";
+        if (quarters > 0 || dimes > 0 || nickels > 0 || pennies > 0) {
+            cout << ", ";
+        }
     }
     if (dollars == 1) {
-        cout << dollars << " dollar" << ", ";
+        cout << dollars << " dollar";
+        if (quarters > 0 || dimes > 0 || nickels > 0 || pennies > 0) {
+            cout << ", ";
+        }
     }
     if (quarters >= 2) {
-        cout << quarters << " quarters" << ", ";
+        cout << quarters << " quarters";
+        if (dimes > 0 || nickels > 0 || pennies > 0) {
+            cout << ", ";
+        }
     }
     if (quarters == 1) {
-        cout << quarters << " quarter" << ", ";
+        cout << quarters << " quarter";
+        if (dimes > 0 || nickels > 0 || pennies > 0) {
+            cout << ", ";
+        }
     }
     if (dimes >= 2) {
-        cout << dimes << " dimes" << ", ";
+        cout << dimes << " dimes"; 
+        if (nickels > 0 || pennies > 0) {
+            cout << ", ";
+        }
     }
     if (dimes == 1) {
-        cout << dimes << " dime" << ", ";
+        cout << dimes << " dime";
+        if (nickels > 0 || pennies > 0) {
+            cout << ", ";
+        }
     }
     if (nickels >= 2) {
-        cout << nickels << " nickels" << ", ";
+        cout << nickels << " nickels";
+        if (pennies > 0) {
+            cout << ", ";
+        }
     }
     if (nickels == 1) {
-        cout << nickels << " nickel" << ", ";
+        cout << nickels << " nickel";
+        if (pennies > 0) {
+            cout << ", ";
+        }
     }
     if (pennies >= 2) {
-        cout << pennies << " pennies" << ". ";
+        cout << pennies << " pennies";
     }
     if (pennies == 1) {
-        cout << pennies << " penny" << ". ";
+        cout << pennies << " penny";
     }
+    cout << ".";
     return 0;
 
 }
