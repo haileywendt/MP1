@@ -48,16 +48,17 @@ int main()
     cin >> customerPays;
 
     // declare variable & determine whether change is owed or not owed to the customer
-    double customerChange = (customerPays - customerOwes) + .005;
-    if (customerChange > 0) {
-        cout << fixed << setprecision(2) << "Change owed is $" << customerChange << " - ";
+    double change = (customerPays - customerOwes);
+    double customerChange2 = (change) + .005;
+    if (change > 0.01) {
+        cout << fixed << setprecision(2) << "Change owed is $" << change << " - ";
     }
     else {
         cout << "Exact payment received - no change owed.";
     }
 
     // declare variables & determine how much of each change type is given back to the customer
-    int changeDue = (100 * customerChange);
+    int changeDue = (100 * customerChange2);
     int dollars = (changeDue / 100);
     changeDue = (changeDue % 100);
     int quarters = (changeDue / 25);
